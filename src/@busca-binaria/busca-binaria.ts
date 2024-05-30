@@ -1,5 +1,3 @@
-import { length } from "assert";
-
 export class BuscaBinaria {
   public buscaIterativa(lista: Array<number>, valorBuscado: number): number {
     const resultadoAntecipado = this.tratarCasosEspecificos(
