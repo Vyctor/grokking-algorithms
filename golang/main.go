@@ -6,10 +6,18 @@ import (
 
 	busca_binaria "github.com/vyctor/grokking-algorithms/golang/busca-binaria"
 	busca_linear "github.com/vyctor/grokking-algorithms/golang/busca-linear"
+	selection_sort "github.com/vyctor/grokking-algorithms/golang/selection-sort"
 	utils "github.com/vyctor/grokking-algorithms/golang/utils"
 )
 
 func main() {
+	var array = utils.GerarArrayNumerosRandomicos(10, 0, 10000)
+	fmt.Print("Array desordenado: ", array)
+	var result = selection_sort.SelectionSort(array)
+	fmt.Println(result)
+}
+
+func BuscaBinaria() {
 	var startedAt = time.Now()
 
 	var lista = utils.GerarArrayNumerico(10_000_000_000)
