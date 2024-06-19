@@ -1,9 +1,28 @@
-import { BubbleSort } from "./@bubble-sort/bubble-sort";
-import { SelectionSort } from "./@selection-sort/selection-sort";
+import { Stack } from "./@stack/stack";
 import { GenerateArrays } from "./@utils/generate-arrays";
 
-const array = GenerateArrays.GenerateRandomNumbersArray(100_000);
+const array = GenerateArrays.GenerateRandomNumbersArray(10);
 
-const orderedArray = new SelectionSort().sort(array);
+const stack = new Stack<number>();
 
-console.log("Array ordenado: ", orderedArray);
+array.forEach((element) => {
+  stack.push(element);
+});
+
+stack.print();
+console.log("Stack size: ", stack.size());
+console.log("Stack peek: ", stack.peek());
+console.log("Stack isEmpty: ", stack.isEmpty());
+stack.pop();
+stack.pop();
+stack.pop();
+stack.pop();
+stack.pop();
+stack.pop();
+stack.pop();
+stack.pop();
+stack.pop();
+stack.pop();
+console.log("Stack size: ", stack.size());
+console.log("Stack peek: ", stack.peek());
+console.log("Stack isEmpty: ", stack.isEmpty());
